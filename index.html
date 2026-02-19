@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wonderflor | Installazioni Verdi d'Élite</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+nav a {
+color: #f4f1ea;
+text-decoration: none;
+margin-left: 30px;
+font-weight: 500;
+letter-spacing: 1px;
+}
+nav a:hover {
+opacity: 0.7;
+}
+
+
+body {
+margin: 0;
+background-color: #0e1a14;
+color: #f4f1ea;
+font-family: 'Inter', sans-serif;
+line-height: 1.8;
+}
+
+header {
+position: absolute;
+top: 0;
+width: 100%;
+padding: 30px 60px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 10;
+}
+
+.logo {
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.5rem;
+letter-spacing: 3px;
+}
+.hero {
+position: relative;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 40px;
+
+background: url("img/hero.jpg");
+background-size: cover;
+background-position: center 25%;
+background-repeat: no-repeat;
+}
+
+
+.hero::before {
+content: "";
+position: absolute;
+inset: 0;
+background: rgba(0,0,0,0.55);
+}
+
+.hero * {
+position: relative;
+z-index: 2;
+}
+
+.hero h1 {
+font-family: 'Cormorant Garamond', serif;
+font-size: 4rem;
+letter-spacing: 5px;
+margin: 0;
+}
+
+.hero p {
+max-width: 750px;
+margin-top: 30px;
+font-size: 1.2rem;
+}
+
+.section {
+padding: 120px 20px;
+max-width: 1100px;
+margin: auto;
+}
+
+.section h2 {
+font-family: 'Cormorant Garamond', serif;
+font-size: 2.5rem;
+margin-bottom: 40px;
+letter-spacing: 2px;
+}
+
+.dark {
+background-color: #111d16;
+}
+
+.gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 30px;
+}
+
+.gallery img {
+width: 100%;
+aspect-ratio: 4 / 3;
+object-fit: cover;
+transition: 0.4s ease;
+display: block;
+border-radius: 6px;
+}
+
+.gallery img {
+height: 450px;
+object-fit: cover;
+}
+
+footer {
+text-align: center;
+padding: 60px 20px;
+background-color: #0b140f;
+font-size: 0.9rem;
+opacity: 0.6;
+}
+
+.catalog-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 40px;
+}
+
+.product img {
+width: 100%;
+height: 350px;
+object-fit: cover;
+border-radius: 8px;
+margin-bottom: 20px;
+}
+
+.product h3 {
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.6rem;
+margin-bottom: 10px;
+}
+
+.product p {
+font-size: 0.95rem;
+margin-bottom: 20px;
+opacity: 0.8;
+}
+.btn {
+display: inline-block;
+padding: 14px 40px;
+background-color: transparent;
+color: #d4b978;
+text-decoration: none;
+border: 1px solid #d4b978;
+letter-spacing: 2px;
+font-size: 0.85rem;
+transition: all 0.3s ease;
+}
+
+.btn:hover {
+background-color: #d4b978;
+color: #111;
+}
+.catalog-section h2 {
+font-family: 'Cormorant Garamond', serif;
+font-size: 2.5rem;
+margin-bottom: 30px;
+}
+
+.catalog-section p {
+max-width: 700px;
+margin: 0 auto 40px;
+opacity: 0.8;
+}
+.catalog-btn {
+display: inline-block;
+padding: 20px 70px;
+background: linear-gradient(135deg, #d4b978, #c6a75e, #b9924c);
+color: #111;
+text-decoration: none;
+font-weight: 600;
+letter-spacing: 3px;
+font-size: 0.9rem;
+border-radius: 4px;
+transition: all 0.4s ease;
+box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+}
+
+.catalog-btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+filter: brightness(1.05);
+}
+.catalog-section {
+text-align: center;
+padding: 120px 20px;
+background: linear-gradient(to bottom, #0e1a14, #0b1410);
+}
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+header {
+padding: 20px 25px;
+}
+
+.logo {
+font-size: 1.1rem;
+letter-spacing: 2px;
+}
+
+.hero {
+padding: 0 20px;
+text-align: center;
+}
+
+.hero h1 {
+font-size: 2.2rem;
+}
+
+.hero p {
+font-size: 0.95rem;
+}
+
+}
+img {
+max-width: 100%;
+height: auto;
+display: block;
+}
+.section {
+padding: 80px 20px;
+}
+
+.section h2 {
+font-size: 1.8rem;
+}
+
+.luxury-btn {
+padding: 12px 30px;
+font-size: 0.85rem;
+}
+.catalog-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 60px;
+padding: 120px 60px;
+}
+
+.product img {
+width: 100%;
+border-radius: 6px;
+}
+
+.product h3 {
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.6rem;
+margin: 20px 0 10px;
+}
+
+.codice {
+font-size: 0.85rem;
+opacity: 0.6;
+margin-bottom: 10px;
+}
+
+.descrizione {
+opacity: 0.8;
+margin-bottom: 20px;
+}
+
+.btn-hero {
+margin-top: 40px;
+display: inline-block;
+padding: 16px 45px;
+border: 1px solid #d4b978;
+color: #d4b978;
+text-decoration: none;
+letter-spacing: 2px;
+font-size: 0.9rem;
+transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+background-color: #d4b978;
+color: #111;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+
+<nav>
+
+</nav>
+</header>
+
+<section class="hero">
+
+<h1>WONDERFLOR</h1>
+<p>
+Fornitura e installazione di allestimenti verdi artificiali 
+per navi da crociera, hotel di lusso e grandi spazi hospitality.
+<a href="#contatti" class="btn-hero">CONTATTACI</a>
+</p>
+<a href="#progetti" class="btn-hero">SCOPRI I NOSTRI PROGETTI</a>
+</section>
+
+<section class="section dark">
+<h2>Chi siamo</h2>
+<p>
+Wonderflor nasce nel 2011 da un’idea maturata dopo anni di esperienza nel settore.
+Da un primo progetto di ingrosso specializzato per garden, vivai e fioristi,
+l’azienda cresce fino a diventare un punto di riferimento negli allestimenti verdi artificiali per grandi spazi.
+</p>
+</section>
+
+<section class="section">
+<h2>Cosa facciamo</h2>
+<p>
+Partiamo da spazi vuoti e progettiamo soluzioni su misura: dalla semplice aiuola con prato
+fino all’installazione di alberi artificiali di 4, 5 o più metri di altezza.
+Realizziamo prati, giardini verticali, aree verdi scenografiche e ambienti di relax
+per hotel, ristoranti, navi da crociera e grandi strutture.
+</p>
+<p>
+Mettiamo a disposizione dei nostri clienti competitività, unicità e qualità,
+grazie all’importazione diretta dei materiali e a un’esperienza decennale nel campo degli allestimenti,
+trasformando ogni ambiente in uno spazio unico e curato nei minimi dettagli.
+</p>
+</section>
+
+<section class="section dark">
+<h2>Materiali e qualità</h2>
+<p>
+Per gli interni utilizziamo tronchi in legno vero trattato per durare nel tempo.
+Per gli esterni impieghiamo tronchi in PVC e materiali UV resistenti e fire retardant,
+garantendo sicurezza, resa estetica e durata.
+</p>
+</section>
+
+<section class="section" id="progetti">
+<h2>Installazioni per Grandi Spazi</h2>
+
+<p style="max-width:800px;margin-bottom:80px;">
+Wonderflor progetta e realizza allestimenti verdi artificiali per ambienti di ampia metratura,
+come hall di hotel, aree lounge, ponti nave e spazi hospitality complessi.
+Ogni intervento nasce da uno studio progettuale mirato a garantire impatto scenografico,
+integrazione architettonica e durabilità tecnica nel tempo.
+</p>
+
+<!-- ALBERI -->
+<h3 style="margin-bottom:30px;letter-spacing:2px;">ALBERI ARTIFICIALI DI GRANDE ALTEZZA</h3>
+<p style="margin-bottom:50px;max-width:750px;">
+Progettazione e realizzazione di alberi artificiali strutturali fino a 5+ metri,
+con integrazione architettonica e materiali certificati.
+</p>
+
+<div class="gallery">
+
+<img src="img/progetto-01-01.jpg">
+<img src="img/progetto-01-15.jpg">
+<img src="img/progetto-01-20.jpg">
+<img src="img/progetto-01-21.jpg">
+<img src="img/progetto-01-29.jpg">
+<img src="img/progetto-01-38.jpg">
+<img src="img/progetto-01-39.jpg">
+<img src="img/progetto-01-40.jpg">
+<img src="img/progetto-01-41.jpg">
+<img src="img/progetto-01-42.jpg">
+<img src="img/progetto-01-44.jpg">
+</div>
+
+<div style="height:120px;"></div>
+
+<!-- GIARDINI VERTICALI -->
+<h3 style="margin-bottom:30px;letter-spacing:2px;">GIARDINI VERTICALI</h3>
+<p style="margin-bottom:50px;max-width:750px;">
+Sistemi modulari e pareti verdi su larga scala, progettati per ambienti hospitality
+e spazi ad alto flusso.
+</p>
+
+<div class="gallery">
+<img src="img/progetto-01-04.jpg">
+<img src="img/progetto-01-03.jpg">
+<img src="img/progetto-01-02.jpg">
+<img src="img/progetto-01-36.jpg">
+<img src="img/progetto-01-37.jpg">
+<img src="img/progetto-01-35.jpg">
+<img src="img/progetto-01-34.jpg">
+<img src="img/progetto-01-33.jpg">
+<img src="img/progetto-01-24.jpg">
+<img src="img/progetto-01-23.jpg">
+<img src="img/progetto-01-22.jpg">
+<img src="img/progetto-01-19.jpg">
+<img src="img/progetto-01-18.jpg">
+<img src="img/progetto-01-17.jpg">
+<img src="img/progetto-01-14.jpg">
+<img src="img/progetto-01-12.jpg">
+<img src="img/progetto-01-11.jpg">
+<img src="img/progetto-01-10.jpg">
+</div>
+
+<div style="height:120px;"></div>
+
+<!-- PRATI / AIUOLE -->
+<h3 style="margin-bottom:30px;letter-spacing:2px;">PRATI ARTIFICIALI E AREE SCENOGRAFICHE</h3>
+<p style="margin-bottom:50px;max-width:750px;">
+Realizzazione di aiuole, prati e composizioni botaniche artificiali
+per hall, lounge e ambienti outdoor protetti.
+</p>
+
+<div class="gallery">
+<img src="img/progetto-01-05.jpg">
+<img src="img/progetto-01-06.jpg">
+<img src="img/progetto-01-07.jpg">
+<img src="img/progetto-01-08.jpg">
+<img src="img/progetto-01-09.jpg">
+<img src="img/progetto-01-13.jpg">
+<img src="img/progetto-01-16.jpg">
+<img src="img/progetto-01-25.jpg">
+<img src="img/progetto-01-26.jpg">
+<img src="img/progetto-01-28.jpg">
+<img src="img/progetto-01-30.jpg">
+<img src="img/progetto-01-31.jpg">
+<img src="img/progetto-01-32.jpg">
+</div>
+
+
+
+</div>
+</section>
+<section class="section luxury-cta">
+<h2>Catalogo Piante Decorative</h2>
+<p>
+Una selezione esclusiva di piante artificiali di alta gamma,
+progettate per ambienti hospitality, retail e grandi spazi architettonici.
+</p>
+<a href="catalogo.html" class="catalog-btn">SCOPRI IL CATALOGO</a>
+
+</section>
+<section class="section dark" id="contatti">
+<h2>Contatti</h2>
+
+<p>
+<strong>Wonderflor</strong><br>
+Via Antica Romana di levante 26, 00<br>
+CAP 16011 - Città Arenzano (GE)<br>
+P.IVA: 02036720999
+</p>
+
+<p>
+Email: <a href="mailto:wonderflor7@gmail.com">wonderflor7@gmail.com</a><br>
+Telefono: <a href="tel:+39 3421973799">+39 3421973799</a>
+</p>
+
+<p>
+Operiamo come fornitore e installatore per hotel, navi da crociera e grandi spazi hospitality.
+</p>
+
+</section>
+
+
+<footer>
+© 2026 Wonderflor – Installazioni verdi d’élite
+</footer>
+
+</body>
+</html>
